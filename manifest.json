@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Roblox Join Link",
+    "version": "1.0",
+    "description": "Allows you to join a game by clicking a link.",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.roblox.com/games/*"
+            ],
+            "js": [
+                "robloxJoinLink.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
